@@ -1,10 +1,10 @@
 [
   {
     "uid": "savannah-latest",
-    "updateDate": "2025-10-19T17:31:07.0Z",
+    "updateDate": "2025-10-19T19:01:33.0Z",
     "titleText": "Savannah Daily Briefing",
     "mainText": "",
-    "streamUrl": "https://YOUR_BUCKET.s3.amazonaws.com/savannah-briefings/latest.mp3",
-    "redirectionUrl": "https://YOUR_USERNAME.github.io/YOUR_REPO/"
+    "streamUrl": "https://savannah-daily-briefing.s3.us-east-2.amazonaws.com/savannah-briefings/latest.mp3",
+    "redirectionUrl": "https://YOUR_USERNAME.github.io/savannah-briefing-automation/"
   }
 ]
