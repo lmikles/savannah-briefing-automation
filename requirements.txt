@@ -3,3 +3,4 @@ pydub
 feedparser
 requests
 beautifulsoup4
+PyYAML
