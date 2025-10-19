@@ -1,2 +1,29 @@
-audio_host_base: "https://YOUR_BUCKET.s3.amazonaws.com/savannah-briefings"
+city_name: "Savannah"
+voice_name_friendly: "Caroline"
+target_duration_minutes: 10
 use_latest_alias: true
+
+audio_host_base: "https://savannah-daily-briefing.s3.us-east-2.amazonaws.com/savannah-briefings"
+
+latest_filename: "latest.mp3"
+dated_filename_template: "{date}.mp3"
+
+sources:
+  - name: "City of Savannah (news)"
+    url: "https://www.savannahga.gov/RSSFeed.aspx?ModID=1&CID=All-0"
+    type: "rss"
+  - name: "WTOC 11"
+    url: "https://www.wtoc.com/"
+    type: "html"
+  - name: "WSAV"
+    url: "https://www.wsav.com/"
+    type: "html"
+  - name: "WJCL 22"
+    url: "https://www.wjcl.com/"
+    type: "html"
+  - name: "SCAD Events"
+    url: "https://www.scad.edu/event-listing"
+    type: "html"
+  - name: "National Weather Service Savannah"
+    url: "https://forecast.weather.gov/MapClick.php?lat=32.0809&lon=-81.0912&unit=0&lg=english&FcstType=json"
+    type: "json"
