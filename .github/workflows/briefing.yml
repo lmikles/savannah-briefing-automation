@@ -36,8 +36,8 @@ jobs:
           S3_BUCKET: ${{ secrets.S3_BUCKET }}
           S3_PREFIX: ${{ secrets.S3_PREFIX }}
           POLLY_VOICE: ${{ secrets.POLLY_VOICE }}
-        run: |
-          python scripts/build_briefing.py
+run: |
+  python -m scripts.build_briefing
 
       - name: Commit updated feed & script
         run: |
