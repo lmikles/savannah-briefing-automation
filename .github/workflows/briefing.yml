@@ -2,8 +2,8 @@ name: Build Savannah Daily Briefing
 
 on:
   schedule:
-    - cron: "0 10 * * *"   # runs at 6:00 AM ET
-  workflow_dispatch:      # ← THIS enables the “Run workflow” button manually
+    - cron: "0 10 * * *"   # 6:00 AM ET during DST
+  workflow_dispatch:
 
 jobs:
   build:
@@ -28,16 +28,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-- name: Build & publish briefing
-  env:
-    AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-    AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    AWS_REGION: ${{ secrets.AWS_REGION }}
-    S3_BUCKET: ${{ secrets.S3_BUCKET }}
-    S3_PREFIX: ${{ secrets.S3_PREFIX }}
-    POLLY_VOICE: ${{ secrets.POLLY_VOICE }}
-  run: |
-    python -m scripts.build_briefing
+      - name: Build & publish briefing
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          S3_BUCKET: ${{ secrets.S3_BUCKET }}
+          S3_PREFIX: ${{ secrets.S3_PREFIX }}
+          POLLY_VOICE: ${{ secrets.POLLY_VOICE }}
+        run: |
+          python -m scripts.build_briefing
 
       - name: Commit updated feed & script
         run: |
