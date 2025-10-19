@@ -1,0 +1,2 @@
+audio_host_base: "https://YOUR_BUCKET.s3.amazonaws.com/savannah-briefings"
+use_latest_alias: true
