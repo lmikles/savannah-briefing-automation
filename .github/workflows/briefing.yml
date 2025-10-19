@@ -2,8 +2,8 @@ name: Build Savannah Daily Briefing
 
 on:
   schedule:
-    - cron: "0 10 * * *"   # 10:00 UTC = 6:00 AM ET during DST
-  workflow_dispatch:
+    - cron: "0 10 * * *"   # runs at 6:00 AM ET
+  workflow_dispatch:      # ← THIS enables the “Run workflow” button manually
 
 jobs:
   build:
