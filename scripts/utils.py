@@ -69,7 +69,7 @@ def extract_weather_from_json(raw_json_str):
 
 def build_script(weather_text, civic_items, culture_items):
     parts = []
-    parts.append("Good morning — this is Caroline with your Savannah Daily Briefing. Let’s get you caught up on what actually matters today in the city.")
+parts.append("Good morning — Evelyn Brooke here in Savannah. Let’s get straight to what’s stirring today.")
     if civic_items:
         parts.append("City and civic moves:")
         for it in civic_items:
