@@ -22,8 +22,15 @@ def synthesize_polly(text, voice, region):
     return AudioSegment.from_file(io.BytesIO(audio_stream), format="mp3")
 
 def upload_s3(mp3_bytes, bucket, key, region):
+    import boto3
     s3 = boto3.client("s3", region_name=region)
-    s3.put_object(Bucket=bucket, Key=key, Body=mp3_bytes, ContentType="audio/mpeg", ACL="public-read")
+    # No ACL here because the bucket has "Bucket owner enforced" (ACLs disabled)
+    s3.put_object(
+        Bucket=bucket,
+        Key=key,
+        Body=mp3_bytes,
+        ContentType="audio/mpeg"
+    )
     return f"https://{bucket}.s3.{region}.amazonaws.com/{key}"
 
 def main():
