@@ -2,7 +2,7 @@
   {
     "uid": "savannah-latest",
     "updateDate": "2025-10-19T19:01:33.0Z",
-    "titleText": "Savannah Daily Briefing",
+    "titleText": "Savannah Daily Briefing with Evelyn Brooke",
     "mainText": "",
     "streamUrl": "https://savannah-daily-briefing.s3.us-east-2.amazonaws.com/savannah-briefings/latest.mp3",
     "redirectionUrl": "https://YOUR_USERNAME.github.io/savannah-briefing-automation/"
