@@ -1,7 +1,7 @@
 [
   {
     "uid": "savannah-latest",
-    "updateDate": "2026-02-11T10:44:20.0Z",
+    "updateDate": "2026-02-12T10:40:00.0Z",
     "titleText": "Savannah Daily Briefing",
     "mainText": "",
     "streamUrl": "https://savannah-daily-briefing.s3.us-east-2.amazonaws.com/savannah-briefings/latest.mp3",
